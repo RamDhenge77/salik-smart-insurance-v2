@@ -1,0 +1,467 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 220 9% 46%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8.9% 46%;
+
+    --accent: 214 93% 67%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.015em;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/30 backdrop-blur-lg border border-white/40 shadow-lg rounded-xl;
+  }
+  
+  .salik-card {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .stat-card {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+}
+
+/* Get Warranty */
+.warranty-hero-pattern {
+  background-color: rgba(41, 50, 65, 0.8);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232CACEB' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Salik theme styling */
+.salik-panel {
+  background-color: rgba(55, 65, 81, 0.95);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transform: translateX(-40px);
+}
+
+.salik-feature-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  color: #374151;
+}
+
+.salik-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #D1D5DB;
+}
+
+.salik-icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: #4B5563;
+  margin-bottom: 1rem;
+}
+
+/* Improve chart visibility */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(30, 73, 118, 0.3) !important;
+  stroke-dasharray: 3 3 !important;
+}
+
+.recharts-cartesian-axis-line {
+  stroke: rgba(30, 73, 118, 0.5) !important;
+}
+
+.recharts-cartesian-axis-tick-line {
+  stroke: rgba(30, 73, 118, 0.5) !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: rgba(255, 255, 255, 0.9) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.recharts-tooltip-wrapper {
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.recharts-default-tooltip {
+  background-color: #051626 !important;
+  border: 1px solid rgba(0, 200, 255, 0.3) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.2) !important;
+}
+
+.recharts-tooltip-item {
+  color: #00C8FF !important;
+}
+
+.recharts-legend-item-text {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.recharts-bar-rectangle path {
+  fill: #00C8FF !important;
+}
+
+/* Dubai-inspired futuristic styling */
+.futuristic-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #0A1929;
+  border: 1px solid rgba(30, 73, 118, 0.5);
+}
+
+.futuristic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 48px rgba(0, 225, 255, 0.15);
+  border: 1px solid rgba(0, 225, 255, 0.3);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Enhance Tab UI */
+.tab-active-indicator {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-active-indicator::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00E1FF, #0095FF);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom right;
+}
+
+.tab-active-indicator.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Futuristic theme */
+.futuristic-theme {
+  background-color: #051626;
+  color: #ffffff;
+}
+
+.futuristic-card-header {
+  background: linear-gradient(90deg, rgba(10,25,41,1) 0%, rgba(30,73,118,0.5) 100%);
+  padding: 1rem;
+  border-bottom: 1px solid rgba(30, 73, 118, 0.5);
+}
+
+.futuristic-accent {
+  color: #00E1FF;
+}
+
+.futuristic-highlight {
+  color: #0095FF;
+}
+
+.futuristic-chart-line {
+  stroke: #00E1FF;
+  stroke-width: 2px;
+}
+
+.futuristic-chart-area {
+  fill: rgba(0, 225, 255, 0.1);
+}
+
+.futuristic-glow {
+  box-shadow: 0 0 10px rgba(0, 225, 255, 0.5);
+  border: 1px solid rgba(0, 225, 255, 0.3);
+}
+
+.futuristic-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 225, 255, 0.8);
+}
+
+.futuristic-button {
+  background-color: #0A1929;
+  border: 1px solid rgba(30, 73, 118, 0.8);
+  color: #00E1FF;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.futuristic-button:hover {
+  background-color: rgba(30, 73, 118, 0.8);
+  box-shadow: 0 0 10px rgba(0, 225, 255, 0.5);
+}
+
+.futuristic-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.futuristic-stat-card {
+  background-color: #0A1929;
+  border: 1px solid rgba(30, 73, 118, 0.5);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.futuristic-stat-card:hover {
+  box-shadow: 0 0 15px rgba(0, 225, 255, 0.2);
+  border-color: rgba(0, 225, 255, 0.3);
+}
+
+.futuristic-stat-card .label {
+  color: #ffffff;
+  opacity: 0.7;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.futuristic-stat-card .value {
+  color: #00E1FF;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.futuristic-stat-card .unit {
+  color: #ffffff;
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+/* Chart styling improvements */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(30, 73, 118, 0.3) !important;
+  stroke-dasharray: 3 3 !important;
+}
+
+.recharts-cartesian-axis-line {
+  stroke: rgba(30, 73, 118, 0.5) !important;
+}
+
+.recharts-cartesian-axis-tick-line {
+  stroke: rgba(30, 73, 118, 0.5) !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: rgba(255, 255, 255, 0.7) !important;
+  font-size: 12px !important;
+}
+
+.recharts-tooltip-wrapper {
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.recharts-default-tooltip {
+  background-color: #051626 !important;
+  border: 1px solid rgba(0, 225, 255, 0.3) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 10px rgba(0, 225, 255, 0.2) !important;
+}
+
+.recharts-tooltip-item {
+  color: #00E1FF !important;
+}
+
+.recharts-legend-item-text {
+  color: #ffffff !important;
+}
+
+.recharts-active-dot {
+  stroke: #00E1FF !important;
+  fill: #051626 !important;
+  r: 6 !important;
+  stroke-width: 2 !important;
+}
+
+/* Premium stat cards like in the image */
+.premium-stat-card {
+  background-color: #0A1929;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(30, 73, 118, 0.5);
+  transition: all 0.3s ease;
+}
+
+.premium-stat-card:hover {
+  box-shadow: 0 0 15px rgba(0, 225, 255, 0.15);
+  border-color: rgba(0, 225, 255, 0.3);
+}
+
+.premium-stat-card .label {
+  color: #ffffff;
+  opacity: 0.7;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.premium-stat-card .value {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.premium-stat-card .unit {
+  color: #00E1FF;
+  font-size: 1.25rem;
+  margin-left: 0.25rem;
+}
+
+/* Progress ring like in the image */
+.progress-ring-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-ring-background {
+  fill: none;
+  stroke: rgba(30, 73, 118, 0.3);
+  stroke-width: 8;
+}
+
+.progress-ring-progress {
+  fill: none;
+  stroke: #00E1FF;
+  stroke-linecap: round;
+  stroke-width: 8;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-ring-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.progress-ring-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.progress-ring-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

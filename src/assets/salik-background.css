@@ -1,0 +1,229 @@
+
+/* Salik theme styling */
+.salik-panel {
+  background-color: rgba(55, 65, 81, 0.95);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transform: translateX(-40px);
+}
+
+/* Card styling */
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Dashboard styling */
+.dashboard-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+/* Chart styling for better visibility */
+.recharts-cartesian-axis-tick-value {
+  fill: #333333 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.recharts-text.recharts-label {
+  fill: #333333 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.recharts-legend-item-text {
+  color: #333333 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.recharts-tooltip-label {
+  color: #374151 !important;
+  font-weight: 600 !important;
+}
+
+/* Table improvements */
+.table-cell-header {
+  color: #374151;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.table-cell-content {
+  color: #4B5563;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.table-cell-highlight {
+  color: #2596be;
+  font-weight: 500;
+}
+
+/* Add salik theme colors */
+:root {
+  --salik-primary: #2596be;
+  --salik-secondary: #4B5563;
+  --salik-light: #F3F4F6;
+  --salik-dark: #111827;
+  --salik-accent: #60A5FA;
+  --salik-muted: #9CA3AF;
+  --salik-border: #E5E7EB;
+  --salik-background: #F9FAFB;
+  --salik-foreground: #374151;
+}
+
+.text-salik-primary {
+  color: var(--salik-primary);
+}
+
+.bg-salik-primary {
+  background-color: var(--salik-primary);
+}
+
+.border-salik-border {
+  border-color: var(--salik-border);
+}
+
+/* UI Card styling */
+.ui-card {
+  background-color: #FFFFFF !important;
+  border-color: var(--salik-border) !important;
+}
+
+/* Tab styling */
+.tab-active {
+  color: var(--salik-primary);
+  border-bottom: 2px solid var(--salik-primary);
+}
+
+/* Button styling */
+.salik-button {
+  background-color: var(--salik-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.salik-button:hover {
+  background-color: var(--salik-dark);
+}
+
+/* New styles for improved readability */
+.chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2596be;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2596be;
+}
+
+.stat-unit {
+  font-size: 14px;
+  color: #6b7280;
+  margin-left: 0.25rem;
+}
+
+/* Improved chart readability styles */
+.recharts-wrapper .recharts-cartesian-grid-horizontal line,
+.recharts-wrapper .recharts-cartesian-grid-vertical line {
+  stroke: rgba(107, 114, 128, 0.2) !important;
+}
+
+.recharts-wrapper .recharts-cartesian-axis-line {
+  stroke: rgba(107, 114, 128, 0.5) !important;
+}
+
+.recharts-wrapper .recharts-legend-item-text {
+  color: #4B5563 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+}
+
+/* Enhanced tooltip styles */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+}
+
+.recharts-tooltip-item-name, 
+.recharts-tooltip-item-value {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+/* Make the axis labels much more visible */
+.recharts-cartesian-axis text {
+  fill: #374151 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.recharts-pie-label-text {
+  fill: #374151 !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+/* Premium stat cards style updates */
+.premium-stat-card {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.premium-stat-card:hover {
+  box-shadow: 0 4px 12px rgba(37, 150, 190, 0.15);
+}
+
+.premium-stat-card .label {
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.premium-stat-card .value {
+  color: #2596be;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.premium-stat-card .unit {
+  color: #6b7280;
+  font-size: 0.875rem;
+}

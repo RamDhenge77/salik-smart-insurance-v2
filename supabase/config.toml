@@ -1,0 +1,5 @@
+
+project_id = "ajcmxmboshohzczvdixy"
+
+[functions.analyze-toll-distance]
+verify_jwt = false
