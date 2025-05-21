@@ -8,10 +8,12 @@ import {
 } from "lucide-react";
 import SettingsDialog from "./SettingsDialog";
 import { Link, useLocation } from "react-router-dom";
+import { useCarContext } from "@/context/Context";
 
 const Header: React.FC = () => {
   const location = useLocation();
   const [isLoggedin, setIsLoggedIn] = React.useState(false);
+  const { showContent } = useCarContext();
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -22,7 +24,7 @@ const Header: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <header className="border-b border-gray-200 bg-white shadow-sm">
+    <header className="border-b border-gray-200 !bg-white shadow-sm">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           {/* <div className="w-12 h-12 mr-3">
@@ -33,9 +35,13 @@ const Header: React.FC = () => {
             />
           </div> */}
           <div className="relative">
-            <h1 className="text-[#2596be] font-bold text-xl">Salik Go</h1>
-            <p className="text-gray-500 text-sm">Your Mobility Assistant</p>
-            <img src="/lovable-uploads/logo.png" className="h-6 absolute top-[-.1rem] left-[5.2rem]" alt="" />
+            <h1 className={`font-bold text-xl ${showContent?'text-[#2596be]':'text-white'}`}>Salik Souq</h1>
+            <p className={` text-sm ${showContent?'text-gray-500':'text-gray-300'}`}>Your Mobility Assistant</p>
+            <img
+              src="/lovable-uploads/logo.png"
+              className="h-6 absolute top-[-.1rem] left-[6.6rem]"
+              alt=""
+            />
           </div>
         </Link>
 

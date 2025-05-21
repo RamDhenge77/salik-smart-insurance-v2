@@ -130,11 +130,11 @@ const DashboardStatCards: React.FC<DashboardStatCardsProps> = (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card
-          className="border-none transition-all duration-300 rounded-[1rem]"
-          style={{
-            boxShadow:
-              "inset 0px 2px 3px 2px white, 0px 17px 14px 0px rgba(0, 0, 0, 0.1)",
-          }}
+          className="stat-card rounded-3xl shadow-xl transform transition-all cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
+          // style={{
+          //   boxShadow:
+          //     "inset 0px 2px 3px 2px white, 0px 17px 14px 0px rgba(0, 0, 0, 0.1)",
+          // }}
         >
           <CardContent className="p-6">
             <div className="flex items-center">
@@ -153,13 +153,7 @@ const DashboardStatCards: React.FC<DashboardStatCardsProps> = (
 
         <HoverCard openDelay={0}>
           <HoverCardTrigger>
-            <Card
-              className="border-none transition-all duration-300  rounded-[1rem] h-full"
-              style={{
-                boxShadow:
-                  "inset 0px 2px 3px 2px white, 0px 17px 14px 0px rgba(0, 0, 0, 0.1)",
-              }}
-            >
+            <Card className="stat-card rounded-3xl shadow-xl transform transition-all cursor-pointer hover:-translate-y-1 hover:shadow-2xl h-full">
               <CardContent className="p-6">
                 <div className="flex items-center">
                   <div className="mr-4 p-2 bg-amber-100 rounded-full">
@@ -190,13 +184,7 @@ const DashboardStatCards: React.FC<DashboardStatCardsProps> = (
           </HoverCardContent>
         </HoverCard>
 
-        <Card
-          className="border-none transition-all duration-300  rounded-[1rem]"
-          style={{
-            boxShadow:
-              "inset 0px 2px 3px 2px white, 0px 17px 14px 0px rgba(0, 0, 0, 0.1)",
-          }}
-        >
+        <Card className="stat-card rounded-3xl shadow-xl transform transition-all cursor-pointer hover:-translate-y-1 hover:shadow-2xl">
           <CardContent className="p-6">
             <div className="flex items-center">
               <div className="mr-4 p-2 bg-green-100 rounded-full">
@@ -214,13 +202,7 @@ const DashboardStatCards: React.FC<DashboardStatCardsProps> = (
           </CardContent>
         </Card>
 
-        <Card
-          className="border-none transition-all duration-300  rounded-[1rem]"
-          style={{
-            boxShadow:
-              "inset 0px 2px 3px 2px white, 0px 17px 14px 0px rgba(0, 0, 0, 0.1)",
-          }}
-        >
+        <Card className="stat-card rounded-3xl shadow-xl transform transition-all cursor-pointer hover:-translate-y-1 hover:shadow-2xl">
           <CardContent className="p-6">
             <div className="flex items-center">
               <div className="mr-4 p-2 bg-teal-100 rounded-full">
@@ -244,11 +226,11 @@ const DashboardStatCards: React.FC<DashboardStatCardsProps> = (
       </div>
       <div className="flex items-center justify-end">
         <div
-          className="w-[592px] h-[324px] overflow-hidden relative border-none transition-all duration-300  rounded-[1rem]"
-          style={{
-            boxShadow:
-              "inset 0px 2px 3px 2px white, 0px 17px 14px 0px rgba(0, 0, 0, 0.2)",
-          }}
+          className="w-[592px] h-[324px] overflow-hidden relative stat-card rounded-3xl shadow-xl transform transition-all  hover:shadow-2xl"
+          // style={{
+          //   boxShadow:
+          //     "inset 0px 2px 3px 2px white, 0px 17px 14px 0px rgba(0, 0, 0, 0.2)",
+          // }}
         >
           <img
             src="/lovable-uploads/lexus-2.webp"

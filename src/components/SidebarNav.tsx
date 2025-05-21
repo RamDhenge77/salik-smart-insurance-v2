@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   LayoutDashboard,
   Shield,
@@ -7,6 +7,7 @@ import {
   Wrench,
   CarFront,
   DollarSign,
+  CircleUserRound,
   Menu,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,6 +20,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Link, useLocation } from "react-router-dom";
 
 interface SidebarItemProps {
   icon: React.ElementType;
@@ -37,41 +39,45 @@ const SidebarItem = ({
     <SidebarMenuButton
       asChild
       isActive={isActive}
-      className="text-white hover:text-white/90"
+      className="text-white hover:text-black transition-all duration-200"
       tooltip={label}
     >
-      <a href={href} className="flex items-center gap-3">
+      <Link to={href} className="flex items-center gap-3">
         <Icon className="h-5 w-5" />
         <span>{label}</span>
-      </a>
+      </Link>
     </SidebarMenuButton>
   </SidebarMenuItem>
 );
 
+// const [isActive, setIsActive] = useState(false);
 const SidebarNav = () => {
+  const location = useLocation();
   const menuItems = [
-    { icon: LayoutDashboard, label: "Dashboard", href: "/", isActive: true },
+    { icon: LayoutDashboard, label: "Analytics", href: "/dashboard" },
     { icon: Shield, label: "Insurance", href: "/insurance" },
     { icon: Car, label: "Buy/Sell Car", href: "/buy-sell" },
     { icon: Calendar, label: "Renew Registration", href: "/registration" },
     { icon: Wrench, label: "Maintenance", href: "/maintenance" },
-    { icon: CarFront, label: "Car Leasing", href: "/leasing" },
-    { icon: DollarSign, label: "Car Financing", href: "/financing" },
+    { icon: CircleUserRound, label: "Hire a Driver", href: "/hire-driver" },
+    { icon: CarFront, label: "Car Leasing", href: "/car-leasing" },
+    { icon: DollarSign, label: "Car Financing", href: "/car-financing" },
   ];
 
   return (
     <Sidebar
-      className="bg-transparent border-none fixed left-0 top-0 h-screen z-50"
+      className="!bg-transparent border-none fixed left-0 top-0 h-screen z-50"
       variant="floating"
       collapsible="icon"
       style={
         {
           "--sidebar-width": "14rem",
           "--sidebar-width-icon": "2.5rem",
+          background: "transparent",
         } as React.CSSProperties
       }
     >
-      <SidebarContent className="mt-4">
+      <SidebarContent className="mt-10">
         <SidebarMenu>
           {menuItems.map((item) => (
             <SidebarItem
@@ -79,12 +85,12 @@ const SidebarNav = () => {
               icon={item.icon}
               label={item.label}
               href={item.href}
-              isActive={item.isActive}
+              isActive={location.pathname === item.href}
             />
           ))}
         </SidebarMenu>
       </SidebarContent>
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+      <div className="absolute top-4 right-[.3rem] -translate-x-1/2">
         <SidebarTrigger className="bg-[#5a3d25]/70 hover:bg-[#5a3d25] text-white rounded-full" />
       </div>
     </Sidebar>

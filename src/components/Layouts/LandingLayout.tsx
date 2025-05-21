@@ -113,8 +113,15 @@ const LandingLayout = () => {
         </div>
 
         <div className="flex">
-          <SidebarNav />
-          <div className="min-h-screen flex flex-col">
+          {showContent && <SidebarNav />}
+          {/* <SidebarNav /> */}
+          <div
+            className={`min-h-screen flex flex-col w-full ${
+              showContent
+                ? "bg-white z-10 my-3 rounded-2xl overflow-hidden mr-4"
+                : ""
+            } `}
+          >
             <Header />
 
             <div

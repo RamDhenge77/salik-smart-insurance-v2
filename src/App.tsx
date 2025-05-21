@@ -17,6 +17,14 @@ import Dashboard from "./components/dashboard/Dashboard";
 import LandingPage from "./components/dashboard/LandingPage";
 import { FinanceProvider } from "./context/FinanceContext";
 import ServiceHistoryPage from "./components/ServicesHistory";
+import DrivingAnalyticsPage from "./pages/DrivingAnalyticsPage";
+import Insurance from "./components/Insurance";
+import BuySellCar from "./pages/BuySellCar";
+import RenewRegistrationPage from "./pages/RenewRegistrationPage";
+import Maintenance from "./components/Maintenance";
+import HireDriver from "./components/HireDriver/HireDriver";
+import CarLeasing from "./components/CarLeasing";
+import CarFinancing from "./components/CarFinancing";
 
 const queryClient = new QueryClient();
 
@@ -36,7 +44,15 @@ const App = () => (
                   <Route path="/service-history" element={<ServiceHistoryPage />} />
 
                   <Route element={<DashboardLayout />}>
-                    <Route path="/dashboard" element={<Dashboard />} />
+                    {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+                    <Route path="/dashboard" element={<DrivingAnalyticsPage />} />
+                    <Route path="/insurance" element={<Insurance />} />
+                    <Route path="/buy-sell" element={<BuySellCar />} />
+                    <Route path="/registration" element={<RenewRegistrationPage />} />
+                    <Route path="/maintenance" element={<Maintenance />} />
+                    <Route path="/hire-driver" element={<HireDriver />} />
+                    <Route path="/car-leasing" element={<CarLeasing />} />
+                    <Route path="/car-financing" element={<CarFinancing />} />
                   </Route>
                 </Route>
 
